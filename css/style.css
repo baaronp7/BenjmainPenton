@@ -1,0 +1,181 @@
+/*
+p {
+  //Desktop Styles
+  width: 100%;
+
+  @include platform(tablet) {
+      //Tablet Styles
+      width: 50%;
+  }
+}
+*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; }
+  body div.App {
+    height: 100vh; }
+    body div.App div.BubbleContainer.load {
+      width: 100%;
+      height: 100vh;
+      display: block;
+      z-index: 1000;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      -webkit-transition-duration: 0.9s;
+      -moz-transition-duration: 0.9s;
+      -o-transition-duration: 0.9s;
+      transition-duration: 0.9s; }
+      body div.App div.BubbleContainer.load div.BubbleElemnet {
+        width: 100%;
+        height: 100vh;
+        -webkit-transition-duration: 0.9s;
+        -moz-transition-duration: 0.9s;
+        -o-transition-duration: 0.9s;
+        transition-duration: 0.9s; }
+    body div.App div.BubbleContainer {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      z-index: 0;
+      top: 0;
+      position: absolute;
+      -webkit-transition-duration: 0.9s;
+      -moz-transition-duration: 0.9s;
+      -o-transition-duration: 0.9s;
+      transition-duration: 0.9s; }
+      body div.App div.BubbleContainer div.BubbleElemnet {
+        height: auto;
+        -webkit-transition-duration: 0.9s;
+        -moz-transition-duration: 0.9s;
+        -o-transition-duration: 0.9s;
+        transition-duration: 0.9s; }
+        body div.App div.BubbleContainer div.BubbleElemnet div.close {
+          display: none; }
+        body div.App div.BubbleContainer div.BubbleElemnet div.close.active {
+          display: block;
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          cursor: pointer; }
+        body div.App div.BubbleContainer div.BubbleElemnet div.close.active:after {
+          content: "\f05c";
+          font-family: FontAwesome;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: inherit;
+          position: absolute;
+          font-size: 30px;
+          color: #fff;
+          top: 12px;
+          left: 10px;
+          z-index: 1; }
+        body div.App div.BubbleContainer div.BubbleElemnet .workExperience, body div.App div.BubbleContainer div.BubbleElemnet .skills {
+          width: 50px;
+          height: 50px;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          -webkit-border-radius: 50px;
+          -moz-border-radius: 50px;
+          -ms-border-radius: 50px;
+          border-radius: 50px;
+          color: #fff;
+          background-color: purple;
+          position: absolute;
+          -webkit-transition-duration: 0.9s;
+          -moz-transition-duration: 0.9s;
+          -o-transition-duration: 0.9s;
+          transition-duration: 0.9s;
+          cursor: pointer; }
+          body div.App div.BubbleContainer div.BubbleElemnet .workExperience > div, body div.App div.BubbleContainer div.BubbleElemnet .skills > div {
+            display: none;
+            -webkit-transition-duration: 0.9s;
+            -moz-transition-duration: 0.9s;
+            -o-transition-duration: 0.9s;
+            transition-duration: 0.9s; }
+        body div.App div.BubbleContainer div.BubbleElemnet .skills {
+          background-color: darkred; }
+        body div.App div.BubbleContainer div.BubbleElemnet .workExperience.load, body div.App div.BubbleContainer div.BubbleElemnet .skills.load {
+          width: 80px;
+          height: 80px;
+          top: -webkit-calc(50% - 40px);
+          top: -moz-calc(50% - 40px);
+          top: calc(50% - 40px);
+          left: -webkit-calc(50% - 40px);
+          left: -moz-calc(50% - 40px);
+          left: calc(50% - 40px);
+          -webkit-border-radius: 50px;
+          -moz-border-radius: 50px;
+          -ms-border-radius: 50px;
+          border-radius: 50px;
+          -webkit-transition-duration: 0.9s;
+          -moz-transition-duration: 0.9s;
+          -o-transition-duration: 0.9s;
+          transition-duration: 0.9s; }
+        body div.App div.BubbleContainer div.BubbleElemnet .skills.load {
+          top: -webkit-calc(50% - 40px);
+          top: -moz-calc(50% - 40px);
+          top: calc(50% - 40px);
+          left: -webkit-calc(50% - 90px);
+          left: -moz-calc(50% - 90px);
+          left: calc(50% - 90px);
+          -webkit-transition-duration: 0.9s;
+          -moz-transition-duration: 0.9s;
+          -o-transition-duration: 0.9s;
+          transition-duration: 0.9s; }
+        body div.App div.BubbleContainer div.BubbleElemnet .workExperience.load:after, body div.App div.BubbleContainer div.BubbleElemnet .skills.load:after {
+          font-size: 60px;
+          -webkit-transition-duration: 0.9s;
+          -moz-transition-duration: 0.9s;
+          -o-transition-duration: 0.9s;
+          transition-duration: 0.9s; }
+        body div.App div.BubbleContainer div.BubbleElemnet .workExperience.active, body div.App div.BubbleContainer div.BubbleElemnet .skills.active {
+          width: 100%;
+          height: 100%;
+          overflow-y: scroll;
+          -webkit-border-radius: 0px;
+          -moz-border-radius: 0px;
+          -ms-border-radius: 0px;
+          border-radius: 0px;
+          -webkit-transition-duration: 0.9s;
+          -moz-transition-duration: 0.9s;
+          -o-transition-duration: 0.9s;
+          transition-duration: 0.9s; }
+          body div.App div.BubbleContainer div.BubbleElemnet .workExperience.active > div.show, body div.App div.BubbleContainer div.BubbleElemnet .skills.active > div.show {
+            display: block;
+            text-indent: 0;
+            padding: 0 50px;
+            -webkit-transition-duration: 1.5s;
+            -moz-transition-duration: 1.5s;
+            -o-transition-duration: 1.5s;
+            transition-duration: 1.5s; }
+            body div.App div.BubbleContainer div.BubbleElemnet .workExperience.active > div.show h1, body div.App div.BubbleContainer div.BubbleElemnet .skills.active > div.show h1 {
+              text-align: center;
+              margin: 10px 0; }
+            body div.App div.BubbleContainer div.BubbleElemnet .workExperience.active > div.show a, body div.App div.BubbleContainer div.BubbleElemnet .skills.active > div.show a {
+              color: #fff; }
+        body div.App div.BubbleContainer div.BubbleElemnet .workExperience:after, body div.App div.BubbleContainer div.BubbleElemnet .skills:after {
+          content: "\f0b1";
+          font-family: FontAwesome;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: inherit;
+          position: absolute;
+          font-size: 30px;
+          color: #fff;
+          top: 12px;
+          left: 10px;
+          z-index: 1;
+          -webkit-transition-duration: 0.9s;
+          -moz-transition-duration: 0.9s;
+          -o-transition-duration: 0.9s;
+          transition-duration: 0.9s; }
+        body div.App div.BubbleContainer div.BubbleElemnet .skills:after {
+          content: "\f085"; }
+        body div.App div.BubbleContainer div.BubbleElemnet .workExperience.active:after, body div.App div.BubbleContainer div.BubbleElemnet .skills.active:after {
+          content: ""; }
+    body div.App div.BubbleContainer.skills {
+      left: 50px; }
+
+/*# sourceMappingURL=style.css.map */

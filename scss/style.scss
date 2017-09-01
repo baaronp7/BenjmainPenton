@@ -1,0 +1,148 @@
+@import "partials/mixins";
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    div.App {
+        height: 100vh;
+
+        div.BubbleContainer.load {
+            width: 100%;
+            height: 100vh;
+            display: block;
+            z-index: 1000;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            @include transtion(0.9s);
+
+            div.BubbleElemnet {
+                width: 100%;
+                height: 100vh;
+                @include transtion(0.9s);
+            }
+        }
+        div.BubbleContainer {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            z-index: 0;
+            top: 0;
+            position: absolute;
+            @include transtion(0.9s);
+
+            div.BubbleElemnet {
+                height: auto;
+                @include transtion(0.9s);
+
+                div.close {
+                    display: none;
+                }
+                div.close.active {
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
+                }
+                div.close.active:after {
+                    content: "\f05c";
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    position: absolute;
+                    font-size: 30px;
+                    color: #fff;
+                    top: 12px;
+                    left: 10px;
+                    z-index: 1;
+                }
+                .workExperience, .skills {
+                    width: 50px;
+                    height: 50px;
+                    top: 0;
+                    left: 0;
+                    overflow: hidden;
+                    @include border-radius(50px);
+                    color: #fff;
+                    background-color: purple;
+                    position: absolute;
+                    @include transtion(0.9s);
+                    cursor: pointer;
+
+                    > div {
+                        display: none;
+                        @include transtion(0.9s);
+                    }
+                }
+                .skills {
+                    background-color: darkred;
+                }
+                .workExperience.load, .skills.load {
+                    width: 80px;
+                    height: 80px;
+                    @include calc(top, "50% - 40px");
+                    @include calc(left, "50% - 40px");
+                    @include border-radius(50px);
+                    @include transtion(0.9s);
+                }
+                .skills.load {
+                    @include calc(top, "50% - 40px");
+                    @include calc(left, "50% - 90px");
+                    @include transtion(0.9s);
+                }
+                .workExperience.load:after, .skills.load:after {
+                    font-size: 60px;
+                    @include transtion(0.9s);
+                }
+                .workExperience.active, .skills.active {
+                    width: 100%;
+                    height: 100%;
+                    overflow-y: scroll;
+                    @include border-radius(0px);
+                    @include transtion(0.9s);
+
+                    > div.show {
+                        display: block;
+                        text-indent: 0;
+                        padding: 0 50px;
+                        @include transtion(1.5s);
+
+                        h1 {
+                            text-align: center;
+                            margin: 10px 0;
+                        }
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+                .workExperience:after, .skills:after {
+                    content: "\f0b1";
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    position: absolute;
+                    font-size: 30px;
+                    color: #fff;
+                    top: 12px;
+                    left: 10px;
+                    z-index: 1;
+                    @include transtion(0.9s);
+                }
+                .skills:after {
+                    content: "\f085";
+                }
+                .workExperience.active:after, .skills.active:after {
+                    content: "";
+                }
+            }
+        }
+        div.BubbleContainer.skills {
+            left: 50px;
+        }
+    }
+}

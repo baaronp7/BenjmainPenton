@@ -1,0 +1,61 @@
+@mixin bgGradient($colorOne, $colorTwo) {
+  background: $colorOne;
+  background: -moz-linear-gradient(top, $colorOne, $colorTwo);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop($colorOne), color-stop($colorTwo));
+  background: -webkit-linear-gradient(top, $colorOne, $colorTwo);
+  background: -o-linear-gradient(top, $colorOne, $colorTwo);
+  background: -ms-linear-gradient(top, $colorOne, $colorTwo);
+  background: linear-gradient(to bottom, $colorOne, $colorTwo);
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transtion($transition) {
+  -webkit-transition-duration: $transition;
+  -moz-transition-duration: $transition;
+  -o-transition-duration: $transition;
+  transition-duration: $transition;
+}
+
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: calc(#{$expression}); 
+}
+
+/*
+p {
+  //Desktop Styles
+  width: 100%;
+
+  @include platform(tablet) {
+      //Tablet Styles
+      width: 50%;
+  }
+}
+*/
+@mixin platform($point) {
+  @if $point == large-desktop {
+     @media (min-width: 1200px) { @content; }
+  }
+   @else if $point == desktop {
+     @media (min-width: 1024px) and (max-width: 1199px) { @content; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 614px) and (max-width: 1023px) { @content; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 321px) and (max-width: 613px)  { @content; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 320px)  { @content; }
+  }
+  @else if $point == tablet-mobile {
+     @media (max-width: 1023px) { @content; }
+  }
+}
