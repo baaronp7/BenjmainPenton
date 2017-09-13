@@ -19,20 +19,20 @@ body {
       height: 100vh;
       display: block;
       z-index: 1000;
-      background-color: #fff;
+      /*background-color: #fff;*/
       position: absolute;
       top: 0;
-      -webkit-transition-duration: 0.9s;
-      -moz-transition-duration: 0.9s;
-      -o-transition-duration: 0.9s;
-      transition-duration: 0.9s; }
+      -webkit-transition-duration: 0.5s;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      transition-duration: 0.5s; }
       body div.App div.BubbleContainer.load div.BubbleElemnet {
         width: 100%;
         height: 100vh;
-        -webkit-transition-duration: 0.9s;
-        -moz-transition-duration: 0.9s;
-        -o-transition-duration: 0.9s;
-        transition-duration: 0.9s; }
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s; }
     body div.App div.BubbleContainer {
       width: 50px;
       height: 50px;
@@ -40,18 +40,22 @@ body {
       z-index: 0;
       top: 0;
       position: absolute;
-      -webkit-transition-duration: 0.9s;
-      -moz-transition-duration: 0.9s;
-      -o-transition-duration: 0.9s;
-      transition-duration: 0.9s; }
+      -webkit-transition-duration: 0.5s;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      transition-duration: 0.5s; }
       body div.App div.BubbleContainer div.BubbleElemnet {
         height: auto;
-        -webkit-transition-duration: 0.9s;
-        -moz-transition-duration: 0.9s;
-        -o-transition-duration: 0.9s;
-        transition-duration: 0.9s; }
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s; }
         body div.App div.BubbleContainer div.BubbleElemnet div.close {
-          display: none; }
+          display: none;
+          -webkit-transition-duration: 0.5s;
+          -moz-transition-duration: 0.5s;
+          -o-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
         body div.App div.BubbleContainer div.BubbleElemnet div.close.active {
           display: block;
           position: absolute;
@@ -76,29 +80,33 @@ body {
           top: 0;
           left: 0;
           overflow: hidden;
-          -webkit-border-radius: 50px;
-          -moz-border-radius: 50px;
-          -ms-border-radius: 50px;
-          border-radius: 50px;
+          -webkit-border-radius: 0px;
+          -moz-border-radius: 0px;
+          -ms-border-radius: 0px;
+          border-radius: 0px;
           color: #fff;
           background-color: purple;
           position: absolute;
-          -webkit-transition-duration: 0.9s;
-          -moz-transition-duration: 0.9s;
-          -o-transition-duration: 0.9s;
-          transition-duration: 0.9s;
+          -webkit-transition-duration: 0.5s;
+          -moz-transition-duration: 0.5s;
+          -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
           cursor: pointer; }
           body div.App div.BubbleContainer div.BubbleElemnet .workExperience > div, body div.App div.BubbleContainer div.BubbleElemnet .skills > div {
             display: none;
-            -webkit-transition-duration: 0.9s;
-            -moz-transition-duration: 0.9s;
-            -o-transition-duration: 0.9s;
-            transition-duration: 0.9s; }
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            transition-duration: 0.5s; }
         body div.App div.BubbleContainer div.BubbleElemnet .skills {
           background-color: darkred; }
         body div.App div.BubbleContainer div.BubbleElemnet .workExperience.load, body div.App div.BubbleContainer div.BubbleElemnet .skills.load {
           width: 80px;
           height: 80px;
+          -webkit-border-radius: 50px;
+          -moz-border-radius: 50px;
+          -ms-border-radius: 50px;
+          border-radius: 50px;
           top: -webkit-calc(50% - 40px);
           top: -moz-calc(50% - 40px);
           top: calc(50% - 40px);
@@ -109,10 +117,10 @@ body {
           -moz-border-radius: 50px;
           -ms-border-radius: 50px;
           border-radius: 50px;
-          -webkit-transition-duration: 0.9s;
-          -moz-transition-duration: 0.9s;
-          -o-transition-duration: 0.9s;
-          transition-duration: 0.9s; }
+          -webkit-transition-duration: 0.5s;
+          -moz-transition-duration: 0.5s;
+          -o-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
         body div.App div.BubbleContainer div.BubbleElemnet .skills.load {
           top: -webkit-calc(50% - 40px);
           top: -moz-calc(50% - 40px);
@@ -120,16 +128,16 @@ body {
           left: -webkit-calc(50% - 90px);
           left: -moz-calc(50% - 90px);
           left: calc(50% - 90px);
-          -webkit-transition-duration: 0.9s;
-          -moz-transition-duration: 0.9s;
-          -o-transition-duration: 0.9s;
-          transition-duration: 0.9s; }
+          -webkit-transition-duration: 0.5s;
+          -moz-transition-duration: 0.5s;
+          -o-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
         body div.App div.BubbleContainer div.BubbleElemnet .workExperience.load:after, body div.App div.BubbleContainer div.BubbleElemnet .skills.load:after {
           font-size: 60px;
-          -webkit-transition-duration: 0.9s;
-          -moz-transition-duration: 0.9s;
-          -o-transition-duration: 0.9s;
-          transition-duration: 0.9s; }
+          -webkit-transition-duration: 0.5s;
+          -moz-transition-duration: 0.5s;
+          -o-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
         body div.App div.BubbleContainer div.BubbleElemnet .workExperience.active, body div.App div.BubbleContainer div.BubbleElemnet .skills.active {
           width: 100%;
           height: 100%;
@@ -138,10 +146,10 @@ body {
           -moz-border-radius: 0px;
           -ms-border-radius: 0px;
           border-radius: 0px;
-          -webkit-transition-duration: 0.9s;
-          -moz-transition-duration: 0.9s;
-          -o-transition-duration: 0.9s;
-          transition-duration: 0.9s; }
+          -webkit-transition-duration: 0.5s;
+          -moz-transition-duration: 0.5s;
+          -o-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
           body div.App div.BubbleContainer div.BubbleElemnet .workExperience.active > div.show, body div.App div.BubbleContainer div.BubbleElemnet .skills.active > div.show {
             display: block;
             text-indent: 0;
@@ -167,10 +175,10 @@ body {
           top: 12px;
           left: 10px;
           z-index: 1;
-          -webkit-transition-duration: 0.9s;
-          -moz-transition-duration: 0.9s;
-          -o-transition-duration: 0.9s;
-          transition-duration: 0.9s; }
+          -webkit-transition-duration: 0.5s;
+          -moz-transition-duration: 0.5s;
+          -o-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
         body div.App div.BubbleContainer div.BubbleElemnet .skills:after {
           content: "\f085"; }
         body div.App div.BubbleContainer div.BubbleElemnet .workExperience.active:after, body div.App div.BubbleContainer div.BubbleElemnet .skills.active:after {
